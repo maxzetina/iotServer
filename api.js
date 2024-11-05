@@ -10,8 +10,8 @@ router.get("/hello", (req, res) => {
 });
 
 router.get("/dataTest", (req, res) => {
-    emp.find({number : req.query.number}).then((doc) => {
-        console.log(doc);
+    emp.find({}).then((doc) => {
+        // console.log(req.query.string);
         res.send(doc)})
 });
 
