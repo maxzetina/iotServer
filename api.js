@@ -10,7 +10,7 @@ router.get("/hello", (req, res) => {
 });
 
 router.get("/dataTest", (req, res) => {
-    emp.find({}).then((doc) => {
+    emp.find().then((doc) => {
         // console.log(req.query.string);
         res.send(doc)})
 });
