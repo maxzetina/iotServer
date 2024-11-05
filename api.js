@@ -2,17 +2,17 @@ const express = require('express')
 const router = express.Router();
 
 // import models so we can interact with the database
-const emp = require("./models/employee");
+const emp = require("./models/test");
 
 
 router.get("/hello", (req, res) => {
     res.send({status: "Express on Vercel"});
 });
 
-router.get("/emps", (req, res) => {
-    emp.find({name : req.query.name}).then((userFound) => {
-        console.log(userFound);
-        res.send(userFound)})
+router.get("/dataTest", (req, res) => {
+    emp.find({number : req.query.number}).then((doc) => {
+        console.log(doc);
+        res.send(doc)})
 });
 
 

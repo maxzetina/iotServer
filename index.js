@@ -14,7 +14,7 @@ require("dotenv").config();
 const mongoConnectionURL = process.env.MONGODB_URI;
 
 //NAME OF DATABASE FOR PROJECT - CHANGE
-const databaseName = "employees";
+const databaseName = "IoT";
 
 mongoose.set('strictQuery', true);
 mongoose.connect(mongoConnectionURL, {
