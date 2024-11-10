@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router();
 
 // import models so we can interact with the database
-const emp = require("./models/test");
+const tests = require("./models/test");
 
 
 router.get("/hello", (req, res) => {
@@ -10,9 +10,9 @@ router.get("/hello", (req, res) => {
 });
 
 router.get("/dataTest", (req, res) => {
-    emp.find().then((doc) => {
-        // console.log(req.query.string);
-        res.send(doc)})
+    tests.find().then((doc) => {
+        res.send(doc)
+    })
 });
 
 
