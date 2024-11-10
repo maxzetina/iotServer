@@ -10,7 +10,7 @@ router.get("/hello", (req, res) => {
 });
 
 router.get("/dataTest", (req, res) => {
-    tests.find().then((doc) => {
+    tests.find({number: req.query.number}).then((doc) => {
         res.send(doc)
     })
 });
