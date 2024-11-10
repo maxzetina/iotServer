@@ -8,5 +8,5 @@ const testSchema = new mongoose.Schema({
 })
 // compile model from schema
 // mongoose.model(COLLECTION NAME, SCHEMA NAME)
-// make sure collection name is plural in mongodb
+// make sure COLLECTION NAME is plural in mongodb
 module.exports = mongoose.model("tests", testSchema);

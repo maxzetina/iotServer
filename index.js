@@ -11,6 +11,9 @@ app.use("/api", api)
 
 require("dotenv").config();
 
+// replace with MONGO_URI env variable from Vercel
+// must add mongodb integration on vercel first
+// to get the generated URI from Vercel to be added here
 const mongoConnectionURL = process.env.MONGODB_URI;
 
 //NAME OF DATABASE FOR PROJECT - CHANGE
